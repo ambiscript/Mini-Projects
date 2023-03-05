@@ -11,3 +11,6 @@ A happy number is defined by the following process. Starting with any positive i
 5. Add the sum of the squares of the digits of x, and assign this sum to x.
 6. If the value of x has been reached before, return false.
 7. Repeat from step 3.
+
+## Reference
+Idea obtained from [Programming Ideas 2](https://play.google.com/store/apps/details?id=com.alansa.ideabag2)
