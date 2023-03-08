@@ -5,7 +5,28 @@
     4. Return the newly-translated string.
 */
 
-const readline = require('readline').createInterface({
+/*
+    node:internal/readline/interface:286
+    input.on('error', onerror);
+            ^
+
+    TypeError: input.on is not a function
+        at Interface.InterfaceConstructor (node:internal/readline/interface:286:9)
+        at new Interface (node:readline:112:3)
+        at Object.createInterface (node:readline:212:10)
+        at Object.<anonymous> (C:\Users\foxes\CSSE\Projects\Mini-Projects\PigLatin\pigLatin.js:8:43)
+        at Module._compile (node:internal/modules/cjs/loader:1254:14)
+        at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+        at Module.load (node:internal/modules/cjs/loader:1117:32)
+        at Module._load (node:internal/modules/cjs/loader:958:12)
+        at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+        at node:internal/main/run_main_module:23:47
+
+    Node.js v18.15.0
+    & Node.js v19.7.0
+*/
+
+const readline = require('node:readline').createInterface({
     input: process.stdin,
     output: process.stdout
 });
@@ -16,7 +37,7 @@ const readline = require('readline').createInterface({
 
 function process(inputString) {
     const characterDictionary = ' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let outputString = ''
+    let outputString = '';
 
     for (let index in inputString) {
         if (characterDictionary.includes(inputString[index])) {

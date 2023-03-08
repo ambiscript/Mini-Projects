@@ -9,5 +9,8 @@ Pig Latin is a game of alterations played on the English language game. To creat
 3. For each word of the string, move the word's first letter to the last position of the word and add "ay".
 4. Return the newly-translated string.
 
+## NOTE
+Javascript implementation is currently (as of 8 March 2023) broken due to what appears to be an error in Node's internal readline library. The error is logged in [pigLatin.js](pigLatin.js). Neither updating to the current LTS (18.15.0) nor the latest release (19.7.0) seemed to resolve the issue. Will be revisited soon.
+
 ## Reference
 Idea obtained from [Programming Ideas 2](https://play.google.com/store/apps/details?id=com.alansa.ideabag2)
