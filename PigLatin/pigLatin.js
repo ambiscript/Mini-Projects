@@ -10,6 +10,21 @@ const readline = require('readline').createInterface({
     output: process.stdout
 });
 
+/*
+    Punctuation needs to be processed out of the string. Potentially, also needs to be saved for re-entry.
+*/
+
+function process(inputString) {
+    const characterDictionary = ' abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let outputString = ''
+
+    for (let index in inputString) {
+        if (characterDictionary.includes(inputString[index])) {
+            outputString += inputString[index];
+        }
+    }
+}
+
 function translate(inputString) {
     let noLetters = 0;
     let words = inputString.split(" ");
